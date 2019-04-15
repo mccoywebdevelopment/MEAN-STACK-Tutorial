@@ -1,0 +1,12 @@
+<h1>First Assignment</h1>
+<input type="text" [(ngModel)]="username">
+<p>User name is {{ username }}</p>
+<button (click)="username='';" [disabled]="!username" class="btn btn-primary btn-danger">Delete</button>
+<h2>Second Assignment</h2>
+<button (click)="toggleDisplay()" class="btn btn-primary">Display Details</button>
+<p *ngIf="isDisplay">Content</p>
+<ul>
+  <li *ngFor="let element of numOfClicks" [ngStyle]="{ backgroundColor: element>=5 ? 'yellow' : 'blue' }">
+    {{ element }}
+  </li>
+</ul>
